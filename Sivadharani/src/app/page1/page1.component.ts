@@ -9,27 +9,32 @@ import { RegisterService } from '../service/register.service';
 })
 export class Page1Component {
   startIndex=0;
-  totalRec:any;
-  record:any;
+  endIndex=0;
+  totalRec=[]
+  record:any=[]
+  pagedata:any;
   constructor(private registerService: RegisterService) {
   }
   ngOnInit(){
     this.firstCall();
   }
   add() {
-   //this.startIndex=0;
-    this.record = this.registerService.register(this.startIndex);
-    // this.totalRec=this.totalRec.concat( this.record)
-    console.log(this.record);
+    this.record = this.registerService.register(this.startIndex,this.endIndex);
+    this.totalRec=this.totalRec.concat( this.record)
+    console.log(this.totalRec);
+    this.record=[];
   }
   onscroll(){
+    this.endIndex=this.startIndex+10;
     this.startIndex +=10;
     this.add();
     console.log(this.startIndex);
   }
   firstCall(){
-    this.record=this.registerService.register(this.startIndex);
-    // this.totalRec=this.totalRec.concat( this.record)
-    console.log(this.record);
+    this.endIndex=15;
+    this.record=this.registerService.register(this.startIndex,this.endIndex);
+    this.totalRec=this.totalRec.concat( this.record)
+    console.log(this.totalRec);
+    this.record=[];
   }
 }

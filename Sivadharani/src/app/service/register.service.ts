@@ -6,10 +6,10 @@ import {HttpClient} from '@angular/common/http';
 export class RegisterService {
   
   constructor(private http: HttpClient) { }
-  register(index: number) {
+  register(index: number, End: number) {
     console.log("Success");
     return this.http.post('http://localhost:5000/student/getRec', {
-      index
+      index, End
     });
 }
 }
