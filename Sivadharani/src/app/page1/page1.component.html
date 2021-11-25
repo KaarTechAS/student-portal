@@ -1,0 +1,235 @@
+<div class="infinite-scroll-auto" infinite-scroll [infiniteScrollDistance]="2" 
+(scrolled)="onscroll()" >
+  <div class="container">
+  <div class="row-1">
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      <mat-card>
+        <div class="col-1">
+          1
+        </div>
+      </mat-card>
+      
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---<div class="container-fluid">
+    <div class="row">
+      <div class="col p-2 font-weight-bold">My Purchase Request</div>
+      <div class="col">
+          <ul class="list-group list-group-horizontal justify-content-end border-less">
+              <li class="list-group-item bg-transparent border-0"><i class="fa fa-search" aria-hidden="true"></i></li>
+              <li class="list-group-item bg-transparent border-0"><i class="fa fa-circle-thin" aria-hidden="true"></i></li>
+              <li class="list-group-item bg-transparent border-0"><i class="fa fa-bar-chart" aria-hidden="true"></i></li>
+              <li class="list-group-item bg-transparent border-0"><i class="fa fa-plus-circle" aria-hidden="true"></i></li>
+          </ul>
+      </div>
+      </div>
+      <div class="row d-flex justify-content-around">
+        <mat-card class="p-2 canvas-1">
+            <mat-card-content>On disbursal</mat-card-content>
+            <mat-card-title>12</mat-card-title>
+            <mat-card-content class="pt-2">View<i class="pl-2 fa fa-angle-right" aria-hidden="true"></i></mat-card-content>
+        </mat-card >
+        <mat-card class="p-2 canvas-2">
+            <mat-card-content>Under Approval</mat-card-content>
+            <mat-card-title>08</mat-card-title>
+            <mat-card-content class="pt-2">View<i class="pl-2 fa fa-angle-right" aria-hidden="true"></i></mat-card-content>
+        </mat-card>
+        <mat-card class="p-2 canvas-3">
+            <mat-card-content>Under Verification</mat-card-content>
+            <mat-card-title>04</mat-card-title>
+            <mat-card-content class="pt-2">View<i class="pl-2 fa fa-angle-right" aria-hidden="true"></i></mat-card-content>
+        </mat-card>
+        <mat-card class="p-2 canvas-4">
+            <mat-card-content>Closed</mat-card-content>
+            <mat-card-title>21</mat-card-title>
+            <mat-card-content class="pt-2">View<i class="pl-2 fa fa-angle-right" aria-hidden="true"></i></mat-card-content>
+        </mat-card>
+        <mat-card class="p-2 text-light bg-secondary">
+            <mat-card-content><span class="pl-5 ml-4">This Month</span><span class="pl-1"><i class="ml-1 fa fa-angle-down fa-lg text-white" aria-hidden="true"></i></span></mat-card-content>
+            <mat-card-content class="pt-3 m-0">PR Claim Value</mat-card-content>
+            <span class="h5">6,45,658</span><span class="pl-1">INR</span>
+            
+        </mat-card>
+        <mat-card class=" p-2 text-light bg-success">
+            <mat-card-content><span class="pl-5 ml-4">This Month</span><span class="pl-1"><i class="ml-1 fa fa-angle-down fa-lg text-white" aria-hidden="true"></i></span></mat-card-content>
+            <mat-card-content class="pt-3 m-0">Alloted Claims</mat-card-content>
+            <span class="h5">5,78,564</span><span class="pl-1">INR</span>
+        </mat-card>
+    </div>
+    
+    <div class="ml-3" *ngFor="let summaryCardsItem of pagedata; let statusIndex = index">
+              <div class="row pt-3" >
+                  <mat-card class="col-3 p-0 m-0 pt-3 box">
+                    <span class="rounded p-2" [ngClass]="{'bg-warning':summaryCardsItem.dataType=='Submitted',
+                    'bg-info':summaryCardsItem.dataType=='Verified',
+                    'bg-success':summaryCardsItem.dataType=='Approved',
+                    'bg-danger':summaryCardsItem.dataType=='On Disbursal'}">
+                      {{summaryCardsItem.dataType}}
+                    </span>
+                    <span class="pl-4 headingBold">{{summaryCardsItem.location}}</span>
+                    </mat-card>
+                  <mat-card class="col-2 box"><span>{{summaryCardsItem.kebs}}</span></mat-card>
+                  <mat-card class="col box">
+                    <span>{{summaryCardsItem.admin}}</span>
+                    <span class="float-right">
+                      <i class="fa fa-undo" aria-hidden="true"></i>
+                      <i class="pl-3 fa fa-comment" aria-hidden="true"></i></span>
+                    
+                  </mat-card>
+              </div>
+              <div class="row">
+                  <mat-card class="col bg">
+                      <div>{{summaryCardsItem.prCode}}</div>
+                      <div class="headingBold">{{summaryCardsItem.pr}}</div>
+                  </mat-card>
+                  <mat-card class="col bg">
+                      <div>{{summaryCardsItem.amountReq}}</div>
+                      <div class="headingBold">{{summaryCardsItem.amount}}</div>
+                  </mat-card>
+                  <mat-card class="col bg">
+                      <div>{{summaryCardsItem.payModel}}</div>
+                      <div class="headingBold">{{summaryCardsItem.pay}}</div>
+                  </mat-card>
+                  <mat-card class="col bg">
+                      <div>{{summaryCardsItem.costCenter}}</div>
+                  </mat-card>
+                  <mat-card class="col bg">
+                      <div>{{summaryCardsItem.treasury}}</div>
+                  </mat-card>
+                  <mat-card class="col bg">
+                      <span>{{summaryCardsItem.elapsed}}</span>
+                      <span class="pl-5 ml-5"><i class="fa fa-angle-up fa-lg" aria-hidden="true"></i></span>
+                      <div class="headingBold">{{summaryCardsItem.day}}</div>
+                  </mat-card>
+                </div>
+              <div *ngIf="statusIndex==0">
+                <div *ngFor="let carditems of tabledata">
+                  <div class="row">
+                    <mat-card class="col-1 tbl">{{carditems.no}}</mat-card>
+                    <mat-card class="col tbl">{{carditems.category}}</mat-card>
+                    <mat-card class="col tbl">{{carditems.description}}</mat-card>
+                    <mat-card class="col tbl">{{carditems.invoice}}</mat-card>
+                    <mat-card class="col tbl">{{carditems.due}}</mat-card>
+                    <mat-card class="col tbl">{{carditems.approver}}</mat-card>
+                    <mat-card class="col tbl">{{carditems.treasury}}</mat-card>
+                  </div>
+                  <div class="row">
+                    <mat-card class="col-1 headingBold tab">{{carditems.noval}}</mat-card>
+                    <mat-card class="col headingBold tab">{{carditems.categoryval}}</mat-card>
+                    <mat-card class="col headingBold tab">{{carditems.descriptionval}}</mat-card>
+                    <mat-card class="col headingBold tab">{{carditems.invoiceval}}</mat-card>
+                    <mat-card class="col headingBold tab">{{carditems.dueval}}</mat-card>
+                    <mat-card class="col headingBold tab" style="color:orange">{{carditems.approvalval}}</mat-card>
+                    <mat-card class="col headingBold tab" style="color: orange">{{carditems.treasury}}</mat-card>
+                  </div>
+                </div>
+              </div>
+    </div>
+  </div>--->
+  
+  
