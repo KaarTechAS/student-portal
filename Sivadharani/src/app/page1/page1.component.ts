@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RegisterService } from '../service/register.service';
 
 @Component({
@@ -7,19 +6,20 @@ import { RegisterService } from '../service/register.service';
   templateUrl: './page1.component.html',
   styleUrls: ['./page1.component.scss']
 })
-export class Page1Component {
+export class Page1Component implements OnInit{
   startIndex=0;
   endIndex=0;
-  totalRec=[]
+  totalRec:any=[]
   record:any=[]
   pagedata:any;
-  constructor(private registerService: RegisterService) {
+  constructor(private _registerService: RegisterService) {
   }
   ngOnInit(){
+    console.log("oninit")
     this.firstCall();
   }
-  add() {
-    this.record = this.registerService.register(this.startIndex,this.endIndex);
+  async add() {
+    this.record = await this._registerService.register(this.startIndex, this.endIndex);
     this.totalRec=this.totalRec.concat( this.record)
     console.log(this.totalRec);
     this.record=[];
@@ -30,9 +30,10 @@ export class Page1Component {
     this.add();
     console.log(this.startIndex);
   }
-  firstCall(){
+  async firstCall(){
+    console.log("firstcall");
     this.endIndex=15;
-    this.record=this.registerService.register(this.startIndex,this.endIndex);
+    this.record=await this._registerService.register(this.startIndex, this.endIndex);
     this.totalRec=this.totalRec.concat( this.record)
     console.log(this.totalRec);
     this.record=[];
