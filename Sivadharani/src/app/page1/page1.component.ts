@@ -25,7 +25,7 @@ export class Page1Component {
     this.record=[];
   }
   onscroll(){
-    this.endIndex=this.startIndex+10;
+    this.endIndex=10;
     this.startIndex +=10;
     this.add();
     console.log(this.startIndex);
