@@ -3,39 +3,16 @@
     height:auto;
     background-color:#E8E8E8;
 }
-.headingBold{font-weight: bold;}  
-.fa{color:grey;}
-.list-group .fa{color:lightgray;}
-.bg{
-    background-color: #F8F8F8;
-    box-shadow: 0 5px 2px rgba(0,0,0,0.1);
-    border-radius: 0%;
-}
-.tbl{
-    border-radius: 0%;
-    box-shadow: none;
-}
 .tab{
     border-radius: 0%;
-    box-shadow: 10px 0 5px rgba(0,0,0,0.3);
+    box-shadow: none;
+    background-color: #F5F5F5
 }
-.box{
+.tab1{
     border-radius: 0%;
-    box-shadow: 0 5px 2px rgba(0,0,0,0.1);
+    box-shadow: none;
+    background-color: #E8E8E8;
 }
-.canvas-1{
-    border-left:5px solid red;
-}
-.canvas-2{
-    border-left:5px solid skyblue;
-}
-.canvas-3{
-    border-left:5px solid orange;
-}
-.canvas-4{
-    border-left:5px solid lightgreen;
-}
-.d-flex mat-card{
-    width:200px;
-    
+.round{
+    background-color:#E8E8E8;
 }

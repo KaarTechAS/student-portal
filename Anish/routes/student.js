@@ -14,15 +14,15 @@ student_router.get("/",(req,res)=>{
 });
 
 //http://localhost:5000/student/getRec
-student_router.get("/getRec",(req,res)=>{
+student_router.post("/getRec",(req,res)=>{
     console.log("Hit Success");
     let startv = parseInt(req.body.index);
     // let startv = 182;
-    // let endv = parseInt(req.body.nor);
-    var query = "SELECT * FROM student LIMIT ?,10;";
+    let endv = parseInt(req.body.nor);
+    var query = "SELECT * FROM student LIMIT ?,?;";
     query = mysql.format(query,[
-        startv
-        // endv
+        startv,
+        endv
     ]);
     /*
         {
