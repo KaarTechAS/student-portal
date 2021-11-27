@@ -7,7 +7,7 @@ const mysql = require('mysql');
 //https://www.qat.com/simple-rest-service-node-js-express/
 Service = function() {
     this.getRecords = function(startv, endv, cb){
-        var query = "SELECT * FROM student LIMIT ?,?;";
+        var query = "SELECT * FROM m_student LIMIT ?,?;";
         query = mysql.format(query,[
             startv,
             endv
