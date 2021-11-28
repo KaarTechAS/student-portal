@@ -7,35 +7,25 @@ import { RegisterService } from '../service/register.service';
   styleUrls: ['./page1.component.scss']
 })
 export class Page1Component implements OnInit{
-  startIndex=0;
-  endIndex=0;
+  startIndex:any=0;
+  endIndex:any=0;
   totalRec:any=[]
   record:any=[]
   pagedata:any;
   constructor(private _registerService: RegisterService) {
   }
   ngOnInit(){
-    console.log("oninit")
-    this.firstCall();
+    this.onscroll();
   }
+
   async add() {
     this.record = await this._registerService.register(this.startIndex, this.endIndex);
     this.totalRec=this.totalRec.concat( this.record)
-    console.log(this.totalRec);
     this.record=[];
   }
   onscroll(){
-    this.endIndex=10;
+    this.endIndex=12;
     this.startIndex +=10;
     this.add();
-    console.log(this.startIndex);
-  }
-  async firstCall(){
-    console.log("firstcall");
-    this.endIndex=15;
-    this.record=await this._registerService.register(this.startIndex, this.endIndex);
-    this.totalRec=this.totalRec.concat( this.record)
-    console.log(this.totalRec);
-    this.record=[];
   }
 }

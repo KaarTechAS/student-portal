@@ -7,42 +7,22 @@ export class RegisterService {
   
   constructor(private http: HttpClient) { }
   register(index: number, nor: number) {
-    console.log("Success");
-    
       try{
-
         return new Promise((resolve, reject) =>{
-  
-          this.http.post("http://localhost:5000/student/getRec", {
-            index, nor
-          })
-  
+          this.http.post("/student/getRec", {index, nor})
           .subscribe(
-  
             res =>{
-  
               return resolve(res)
-  
             },
-  
             err => {
-  
               console.log(err);
-  
               return reject(err);
-  
             }
-  
           );
-  
         });
-  
       } catch(err)
-  
       {
-  
         return Promise.reject();
-  
       }
-    }
+  }
 }

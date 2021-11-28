@@ -1,16 +1,18 @@
+<!--infinite scrolling-->
 <div class="infinite-scroll-auto" infinite-scroll [infiniteScrollDistance]="2" 
 (scrolled)="onscroll()" >
   <div class="container">
-    <div class="m-2 row">
-      <mat-card class="rounded-left col tab border-right">gender</mat-card>
-      <mat-card class="col tab border-right">loe</mat-card>
-      <mat-card class="col tab border-right">lunch</mat-card>
-      <mat-card class="col tab border-right">tpc</mat-card>
-      <mat-card class="col tab border-right">maths</mat-card>
-      <mat-card class="col tab border-right">rs</mat-card>
-      <mat-card class="rounded-right col tab">ws</mat-card>
+    <!--class for displaying column names-->
+    <div class="row ">
+      <mat-card class="rounded-left col head border-right">gender</mat-card>
+      <mat-card class="col head border-right">loe</mat-card>
+      <mat-card class="col head border-right">lunch</mat-card>
+      <mat-card class="col head border-right">tpc</mat-card>
+      <mat-card class="col head border-right">maths</mat-card>
+      <mat-card class="col head border-right">rs</mat-card>
+      <mat-card class="rounded-right col head">ws</mat-card>
     </div>
-    
+  <!--div for fetching and displaying values from backend-->  
     <div *ngFor="let data of totalRec">
       <div class=" row">
         <mat-card class="rounded-left col tab border-right">{{data.gender}}</mat-card>
@@ -22,75 +24,5 @@
         <mat-card class="rounded-right col tab">{{data.ws}}</mat-card>
       </div>
     </div>
-
-
-
-  <!---<div class="row-1">
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      <mat-card>
-        <div class="col-1">
-          1
-        </div>
-      </mat-card>
-      </div>--->
   </div>
 </div>
