@@ -4,11 +4,10 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class RegisterService {
-  
   constructor(private http: HttpClient) { }
   register(index: number, nor: number) {
       try{
-        return new Promise((resolve, reject) =>{
+        return new Promise((resolve, reject)=>{
           this.http.post("/student/getRec", {index, nor})
           .subscribe(
             res =>{
