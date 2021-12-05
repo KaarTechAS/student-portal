@@ -7,6 +7,10 @@ import { RegisterService } from '../service/register.service';
   styleUrls: ['./page1.component.scss']
 })
 export class Page1Component implements OnInit{
+  constructor(){}
+  ngOnInit(): void{}
+}
+/*export class Page1Component implements OnInit{
   startIndex:any=0;
   endIndex:any=0;
   totalRec:any=[]
@@ -28,4 +32,4 @@ export class Page1Component implements OnInit{
     this.startIndex +=10;
     this.add();
   }
-}
+}*/
