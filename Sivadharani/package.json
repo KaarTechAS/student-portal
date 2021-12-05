@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "start-dev": "node ./node_modules/@angular/cli/bin/ng serve --port 4401 --watch=true  --proxy-config proxy.config.json",
     "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
@@ -27,6 +28,7 @@
     "bootstrap": "^4.5.0",
     "ngx-infinite-scroll": "^10.0.1",
     "rxjs": "~6.6.0",
+    "rxjs-observable": "0.0.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
