@@ -8,13 +8,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar'
 import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
+import { RegisterService } from './service/register.service';
+import { Page3Component } from './page3/page3.component';
+import { Page4Component } from './page4/page4.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Page1Component,
-    
+    Page2Component,
+    Page3Component,
+    Page4Component,
     
   ],
   imports: [
@@ -23,9 +30,10 @@ import { Page1Component } from './page1/page1.component';
     NgbModule,
     MatCardModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    MatToolbarModule
   ],
-  providers: [],
+  providers: [RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

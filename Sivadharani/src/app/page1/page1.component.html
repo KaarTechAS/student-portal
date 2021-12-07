@@ -1,8 +1,9 @@
-<!--infinite scrolling-->
+<!---
+<>!--infinite scrolling--<>
 <div class="infinite-scroll-auto" infinite-scroll [infiniteScrollDistance]="2" 
 (scrolled)="onscroll()" >
   <div class="container">
-    <!--class for displaying column names-->
+    <>!--class for displaying column names--<>
     <div class="row ">
       <mat-card class="rounded-left col head border-right">gender</mat-card>
       <mat-card class="col head border-right">loe</mat-card>
@@ -12,7 +13,7 @@
       <mat-card class="col head border-right">rs</mat-card>
       <mat-card class="rounded-right col head">ws</mat-card>
     </div>
-  <!--div for fetching and displaying values from backend-->  
+  <>!--div for fetching and displaying values from backend--<>  
     <div *ngFor="let data of totalRec">
       <div class=" row">
         <mat-card class="rounded-left col tab border-right">{{data.gender}}</mat-card>
@@ -25,4 +26,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->

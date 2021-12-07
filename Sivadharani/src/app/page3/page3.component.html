@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="button rounded m-3 p-2 btn-primary" (click)="behfun()">press</div>
+    </div>
+   
+    <div class="row ">
+        <mat-card class="rounded-left col head border-right">gender</mat-card>
+        <mat-card class="col head border-right">loe</mat-card>
+        <mat-card class="col head border-right">lunch</mat-card>
+        <mat-card class="col head border-right">tpc</mat-card>
+        <mat-card class="col head border-right">maths</mat-card>
+        <mat-card class="col head border-right">rs</mat-card>
+        <mat-card class="rounded-right col head">ws</mat-card>
+      </div>
+    <div *ngFor="let data of records">
+        <div class=" row">
+          <mat-card class="rounded-left col tab border-right">{{data.gender}}</mat-card>
+          <mat-card class="col tab border-right">{{data.loe}}</mat-card>
+          <mat-card class="col tab border-right">{{data.lunch}}</mat-card>
+          <mat-card class="col tab border-right">{{data.tpc}}</mat-card>
+          <mat-card class="col tab border-right">{{data.maths}}</mat-card>
+          <mat-card class="col tab border-right">{{data.rs}}</mat-card>
+          <mat-card class="rounded-right col tab">{{data.ws}}</mat-card>
+        </div>
+      </div>
+</div>
