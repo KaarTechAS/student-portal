@@ -1,7 +1,7 @@
 var express = require('express');
 const connection = require('../config/db_config');
 var student_router = express.Router();
-const mysql = require('mysql');
+// const mysql = require('mysql');
 var service = require('../service/service');
 // var service1 = new service();
 
@@ -17,5 +17,10 @@ student_router.post("/",(req,res)=>{
 
 //http://localhost:5000/student/getRec
 student_router.post("/getRec", service.getRecords);
+// student_router.post("/getRec", (req,res)=>{
+//     connection.checkConnection();
+// });
+
+student_router.post("/sample",service.sample);
 
 module.exports = student_router;
